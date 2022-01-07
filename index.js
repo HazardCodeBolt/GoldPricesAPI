@@ -70,6 +70,10 @@ app.get("/:currency", async (req, res) => {
   });
 });
 
+app.get('/', (req, res)=>{
+  res.json();
+});
+
 app.listen(PORT, (e) => {
   console.log(`server running on port ${PORT}`);
 });
