@@ -54,7 +54,7 @@ app.get("/:currency", async (req, res) => {
     for (let index = 0; index < karats.length; index++) {
       json_response["karat_prices"][karats[index]] = new_json_data[index];
     }
-    json_response["nesab_of_gold"] = new_json_data[0] * 85;
+    json_response["nesab_of_gold"] = (new_json_data[0] * 85).toFixed(3);
 
     json_response["price_update_time"] = $("#main-table td[colspan=3]", html)
       .text()
